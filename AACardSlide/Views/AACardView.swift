@@ -8,12 +8,12 @@
 import UIKit
 import Combine
 
-final class CardView: UIView {
+final class AACardView: UIView {
     
     var gestureValue =  PassthroughSubject<CGFloat, Never>()
     
     private let profileImage : UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "Doug_Hurley.jpg"))
+        let imageView = UIImageView(image: UIImage(systemName: "bolt.circle.fill"))
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -50,15 +50,13 @@ final class CardView: UIView {
         addSubview(infoLabel)
         
         //Backgound view
-        backgroundColor = UIColor(named: "crew-card-bg")
+        backgroundColor = .systemBackground
         layer.cornerRadius = 10
        
     
         //Setup constains
-        setupConstrains()
+       // setupConstrains()
         
-        profileImage.layer.cornerRadius = 60
-        profileImage.clipsToBounds = true
   
         //pan gesture
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
@@ -71,20 +69,21 @@ final class CardView: UIView {
     }
 
     /// Setup constains view after adding subviews
-    private func setupConstrains(){
+     func setupConstrains(){
         
-//        profileImage.snp.makeConstraints { (make) in
-//            make.left.top.equalToSuperview().inset(10)
-//
-//            make.height.width.equalTo(120)
-//
-//         }
-//
-//         infoLabel.snp.makeConstraints { (make) in
-//             make.left.equalTo(profileImage.snp.right).offset(20)
-//             make.right.equalToSuperview().inset(10)
-//             make.top.equalToSuperview().inset(20)
-//         }
+       
+        
+        //profile Image
+        profileImage.leftAnchor.constraint(equalTo: superview!.leftAnchor, constant: 10).isActive = true
+        profileImage.topAnchor.constraint(equalTo: superview!.topAnchor, constant: 10).isActive = true
+        profileImage.heightAnchor.constraint(equalToConstant: 65).isActive = true
+        profileImage.widthAnchor.constraint(equalToConstant: 65).isActive = true
+        
+        //infoLabel
+        infoLabel.leftAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 20).isActive = true
+        infoLabel.topAnchor.constraint(equalTo: superview!.topAnchor, constant: 20).isActive = true
+        infoLabel.rightAnchor.constraint(equalTo: superview!.rightAnchor, constant: 10).isActive = true
+    
     }
     
     /// Handle cart gesture movements
