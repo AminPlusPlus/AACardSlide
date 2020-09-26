@@ -20,21 +20,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupView()
     }
 
     
     private func setupView() {
-        (0...1).forEach { (i) in
+        (0...5).forEach { (i) in
         
             let crewView = AACardView()
-            
+            crewView.translatesAutoresizingMaskIntoConstraints = false
             
             containerCardView.addSubview(crewView)
+            crewView.setupConstrains()
             
-//            crewView.snp.makeConstraints { (make) in
-//                make.edges.equalToSuperview()
-//            }
-            
+            crewView.heightAnchor.constraint(equalTo: containerCardView.heightAnchor).isActive = true
+            crewView.widthAnchor.constraint(equalTo: containerCardView.widthAnchor).isActive = true
             
             
             cancellable = crewView.gestureValue.sink(receiveValue: { value in
