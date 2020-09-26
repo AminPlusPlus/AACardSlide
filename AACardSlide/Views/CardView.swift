@@ -70,7 +70,6 @@ final class CardView: UIView {
       
     }
 
-    
     /// Setup constains view after adding subviews
     private func setupConstrains(){
         
