@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class CardView: UIView {
+final class AACardView: UIView {
     
     var gestureValue =  PassthroughSubject<CGFloat, Never>()
     
@@ -73,18 +73,17 @@ final class CardView: UIView {
     /// Setup constains view after adding subviews
     private func setupConstrains(){
         
-//        profileImage.snp.makeConstraints { (make) in
-//            make.left.top.equalToSuperview().inset(10)
-//
-//            make.height.width.equalTo(120)
-//
-//         }
-//
-//         infoLabel.snp.makeConstraints { (make) in
-//             make.left.equalTo(profileImage.snp.right).offset(20)
-//             make.right.equalToSuperview().inset(10)
-//             make.top.equalToSuperview().inset(20)
-//         }
+        
+        //profile Image
+        profileImage.leftAnchor.constraint(equalTo: superview!.leftAnchor, constant: 10).isActive = true
+        profileImage.topAnchor.constraint(equalTo: superview!.topAnchor, constant: 10).isActive = true
+        profileImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        
+        //infoLabel
+        infoLabel.leftAnchor.constraint(equalTo: superview!.leftAnchor, constant: 20).isActive = true
+        infoLabel.topAnchor.constraint(equalTo: superview!.topAnchor, constant: 20).isActive = true
+        infoLabel.rightAnchor.constraint(equalTo: superview!.rightAnchor, constant: 10).isActive = true
+    
     }
     
     /// Handle cart gesture movements
