@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DAAEF42251FDBED00C5063E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAEF41251FDBED00C5063E /* CardView.swift */; };
 		0DD60DA0251FD85800A091D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD60D9F251FD85800A091D4 /* AppDelegate.swift */; };
 		0DD60DA2251FD85800A091D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD60DA1251FD85800A091D4 /* SceneDelegate.swift */; };
 		0DD60DA4251FD85800A091D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD60DA3251FD85800A091D4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DAAEF41251FDBED00C5063E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0DD60D9C251FD85800A091D4 /* AACardSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AACardSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD60D9F251FD85800A091D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD60DA1251FD85800A091D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DAAEF40251FDB9400C5063E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DAAEF41251FDBED00C5063E /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0DD60D93251FD85800A091D4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		0DD60D9E251FD85800A091D4 /* AACardSlide */ = {
 			isa = PBXGroup;
 			children = (
+				0DAAEF40251FDB9400C5063E /* Views */,
 				0DD60D9F251FD85800A091D4 /* AppDelegate.swift */,
 				0DD60DA1251FD85800A091D4 /* SceneDelegate.swift */,
 				0DD60DA3251FD85800A091D4 /* ViewController.swift */,
@@ -139,6 +150,7 @@
 			files = (
 				0DD60DA4251FD85800A091D4 /* ViewController.swift in Sources */,
 				0DD60DA0251FD85800A091D4 /* AppDelegate.swift in Sources */,
+				0DAAEF42251FDBED00C5063E /* CardView.swift in Sources */,
 				0DD60DA2251FD85800A091D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
