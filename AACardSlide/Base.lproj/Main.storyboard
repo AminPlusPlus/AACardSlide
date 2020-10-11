@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKX-WQ-K9l">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKX-WQ-K9l" customClass="AAContainerView" customModule="AACardSlide" customModuleProvider="target">
                                 <rect key="frame" x="20" y="366" width="374" height="164"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="164" id="jXP-nQ-Wdd"/>
@@ -33,7 +33,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerCardView" destination="qKX-WQ-K9l" id="eEv-yt-OsP"/>
+                        <outlet property="containerCardView" destination="qKX-WQ-K9l" id="Wcm-gW-FCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
