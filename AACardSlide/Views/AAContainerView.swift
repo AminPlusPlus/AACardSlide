@@ -46,18 +46,19 @@ final class AAContainerView : UIView {
         bView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
         bView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         
-        aView.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        let scaleByX : CGFloat = 0.5
+        aView.transform = CGAffineTransform(scaleX: scaleByX, y: scaleByX)
         aView.alpha = 0
 
         cancellable = bView.gestureValue.sink(receiveValue: { value in
-
                 let val = 0.5 * (abs(value) / 100)
-                print(val)
-            if val < 1 {
-            self.aView.transform = CGAffineTransform(scaleX: val, y: val)
-                self.aView.alpha = val
-            }
-             
+                let scaleVal = val + scaleByX
+
+                if scaleVal < 1 {
+                 self.aView.transform = CGAffineTransform(scaleX: scaleVal, y: scaleVal )
+                 self.aView.alpha = val
+                }
+
             })
    
     
