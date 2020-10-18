@@ -51,14 +51,8 @@ final class AACardView: UIView {
         
         //Backgound view
         backgroundColor = .systemBackground
-        layer.cornerRadius = 10
-       
-    
-        //Setup constains
-       // setupConstrains()
-        
-  
-        //pan gesture
+
+        //Pan gesture
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         

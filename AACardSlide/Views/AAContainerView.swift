@@ -55,8 +55,8 @@ final class AAContainerView : UIView {
                 let scaleVal = val + scaleByX
 
                 if scaleVal < 1 {
-                 self.aView.transform = CGAffineTransform(scaleX: scaleVal, y: scaleVal )
-                 self.aView.alpha = val
+                  self.aView.transform = CGAffineTransform(scaleX: scaleVal, y: scaleVal )
+                  self.aView.alpha = val
                 }
 
             })
